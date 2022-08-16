@@ -13,6 +13,7 @@
 		E62C7D8E28AB59EE003200F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E62C7D8C28AB59EE003200F5 /* Main.storyboard */; };
 		E62C7D9028AB59F2003200F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62C7D8F28AB59F2003200F5 /* Assets.xcassets */; };
 		E62C7D9328AB59F2003200F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E62C7D9128AB59F2003200F5 /* LaunchScreen.storyboard */; };
+		E62C7D9B28AB6315003200F5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62C7D9A28AB6315003200F5 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E62C7D8F28AB59F2003200F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E62C7D9228AB59F2003200F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E62C7D9428AB59F2003200F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E62C7D9A28AB6315003200F5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E62C7D8628AB59EE003200F5 /* AppDelegate.swift */,
 				E62C7D8828AB59EE003200F5 /* SceneDelegate.swift */,
 				E62C7D8A28AB59EE003200F5 /* ViewController.swift */,
+				E62C7D9A28AB6315003200F5 /* DetailView.swift */,
 				E62C7D8C28AB59EE003200F5 /* Main.storyboard */,
 				E62C7D8F28AB59F2003200F5 /* Assets.xcassets */,
 				E62C7D9128AB59F2003200F5 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E62C7D8B28AB59EE003200F5 /* ViewController.swift in Sources */,
+				E62C7D9B28AB6315003200F5 /* DetailView.swift in Sources */,
 				E62C7D8728AB59EE003200F5 /* AppDelegate.swift in Sources */,
 				E62C7D8928AB59EE003200F5 /* SceneDelegate.swift in Sources */,
 			);

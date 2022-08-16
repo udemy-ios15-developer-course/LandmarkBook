@@ -30,6 +30,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailView", sender: landmarks[indexPath.row])
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
@@ -39,6 +43,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return landmarks.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailView" {
+            let landmark = sender as! Landmark
+            let vc = segue.destination as! DetailView
+            vc.imageName = landmark.imageName
+            vc.title1 = landmark.title
+        }
     }
     
     private struct Landmark : Identifiable {
