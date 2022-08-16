@@ -9,26 +9,36 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var count = 1
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    private var landmarks = [Landmark]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        landmarks.append(Landmark(imageName: "eiffel", title: "Eiffel Tower"))
+        landmarks.append(Landmark(imageName: "great_pyramid", title: "Great Pyramid"))
+        landmarks.append(Landmark(imageName: "pisa", title: "Leaning Tower of Pisa"))
+        landmarks.append(Landmark(imageName: "taj_mahal", title: "Taj Mahal"))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
-        cell.textLabel?.text = "\(count)"
-        count+=1
+        cell.textLabel?.text = "\(landmarks[indexPath.row].title)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return landmarks.count
+    }
+    
+    private struct Landmark : Identifiable {
+        var imageName: String
+        var title: String
+        
+        var id = UUID()
     }
 }
 
