@@ -23,6 +23,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         landmarks.append(Landmark(imageName: "taj_mahal", title: "Taj Mahal"))
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            landmarks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
